@@ -1,0 +1,196 @@
+
+@font-face{
+    font-family: 'Black Han Sans', sans-serif;
+}
+body {
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: #FFFBF3;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: 'Black Han Sans', sans-serif;
+    text-align: center;
+    color: #A30000;
+    margin: 90px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.fake_news{
+    font-family: 'Black Han Sans', sans-serif;
+    color: #A30000;
+    margin: 90px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+.true_news{
+    font-family: 'Black Han Sans', sans-serif;
+    color: #24c400;
+    margin: 90px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+h4{
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
+    margin: 50px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+}
+h5{
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+    margin: 0px 50px 150px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    &.dark {
+        --background: #A30000;
+        --shadow: 0 2px 8px -1px #{rgba(#151924, .32)};
+        --shadow-hover: 0 4px 20px -2px #{rgba(#151924, .5)};
+    }
+    &.white {
+        --background: #FFFBF3;
+        --text: #275efe;
+        --shadow: 0 2px 8px -1px #{rgba(#121621, .04)};
+        --shadow-hover: 0 4px 20px -2px #{rgba(#121621, .12)};
+    }
+    &.fast {
+        --duration: .32s;
+    }
+}
+
+.button {
+    --background: #A30000;
+    --text: #FFFBF3;
+    --font-size: 16px;
+    --duration: .44s;
+    --move-hover: -4px;
+    --shadow: 0 2px 8px -1px #{rgba(#275efe, .32)};
+    --shadow-hover: 0 4px 20px -2px #{rgba(#275efe, .5)};
+    --font-shadow: var(--font-size);
+    padding: 16px 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: var(--font-size);
+    border-radius: 24px;
+    display: block;
+    outline: none;
+    text-decoration: none;
+    font-size: var(--font-size);
+    letter-spacing: .5px;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    transform: translateY(var(--y)) translateZ(0);
+    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+    div {
+        display: flex;
+        overflow: hidden;
+        text-shadow: 0 var(--font-shadow) 0 var(--text);
+        span {
+            display: block;
+            backface-visibility: hidden;
+            font-style: normal;
+            transition: transform var(--duration) ease;
+            transform: translateY(var(--m)) translateZ(0);
+            $i: 1;
+            @while $i < 12 {
+                &:nth-child(#{$i}) {
+                    transition-delay: $i / 20 + s;
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+    &:hover {
+        --y: var(--move-hover);
+        --shadow: var(--shadow-hover);
+        span {
+            --m: calc(var(--font-size) * -1);
+        }
+    }
+    &.reverse {
+        --font-shadow: calc(var(--font-size) * -1);
+        &:hover {
+            span {
+                --m: calc(var(--font-size));
+            }
+        }
+    }
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+// Center & dribbble
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Roboto', Arial;
+    justify-content: center;
+    align-items: center;
+    background: #FFFBF3;
+    .button {
+        margin: 0 6px;
+    }
+    .dribbble {
+        position: fixed;
+        display: block;
+        right: 20px;
+        bottom: 20px;
+        img {
+            display: block;
+            height: 28px;
+        }
+    }
+}
+.nav-link{
+    color: #A30000;
+}
+a{
+    color: #A30000;
+}
+footer {
+    display: block;
+    text-align: center;
+    margin: 50px 50px 0px 50px;
+}
+ul{
+    font-size: 16px;
+}
+.email{
+    margin: 100px 50px 0px 50px;
+}
+.github{
+    margin: 0px 50px 100px 50px;
+}
+.warning{
+    margin: 140px 0px 100px 0px;
+}
+.body__{
+    height:500px;
+}
